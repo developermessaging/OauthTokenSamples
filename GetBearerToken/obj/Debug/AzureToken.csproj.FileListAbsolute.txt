@@ -1,0 +1,10 @@
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\AzureToken.exe.config
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\AzureToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\AzureToken.pdb
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\AzureToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\AzureToken.pdb
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\AzureToken.csprojResolveAssemblyReference.cache

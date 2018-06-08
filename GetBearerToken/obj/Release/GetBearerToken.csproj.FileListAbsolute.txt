@@ -1,0 +1,19 @@
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\GetBearerToken.exe.config
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\GetBearerToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\GetBearerToken.pdb
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Release\GetBearerToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Release\GetBearerToken.pdb
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\GetBearerToken.exe.config
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\GetBearerToken.exe
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\GetBearerToken.pdb
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Release\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Release\GetBearerToken.csproj.CoreCompileInputs.cache
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Release\GetBearerToken.exe
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Release\GetBearerToken.pdb

@@ -1,0 +1,45 @@
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\GetBearerToken.exe.config
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\GetBearerToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\GetBearerToken.pdb
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\GetBearerToken.csprojResolveAssemblyReference.cache
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\GetBearerToken.exe
+c:\users\catagh\documents\visual studio 2015\Projects\AureToken\AureToken\obj\Debug\GetBearerToken.pdb
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\GetBearerToken.exe.config
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\GetBearerToken.exe
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\GetBearerToken.pdb
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Debug\GetBearerToken.csproj.CoreCompileInputs.cache
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Debug\GetBearerToken.exe
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Debug\GetBearerToken.pdb
+C:\Users\catagh.EUROPE\Desktop\GetBearerToken\GetBearerToken\obj\Debug\GetBearerToken.csprojResolveAssemblyReference.cache
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.exe.config
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.exe
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.pdb
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csprojAssemblyReference.cache
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csproj.CoreCompileInputs.cache
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csproj.CopyComplete
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.exe
+C:\Users\anixi\Desktop\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.pdb
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.exe.config
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.exe
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\GetBearerToken.pdb
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+C:\Tools\GetBearerTokenGUI\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+C:\Tools\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csprojAssemblyReference.cache
+C:\Tools\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csproj.CoreCompileInputs.cache
+C:\Tools\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.csproj.CopyComplete
+C:\Tools\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.exe
+C:\Tools\GetBearerTokenGUI\GetBearerToken\obj\Debug\GetBearerToken.pdb
