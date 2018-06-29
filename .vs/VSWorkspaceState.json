@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GetBearerTokenGUI"
   ],
-  "SelectedNode": "\\GetBearerToken.sln",
+  "SelectedNode": "\\GetBearerTokenGUI\\GetBearerTokenMain.cs",
   "PreviewInSolutionExplorer": false
 }
