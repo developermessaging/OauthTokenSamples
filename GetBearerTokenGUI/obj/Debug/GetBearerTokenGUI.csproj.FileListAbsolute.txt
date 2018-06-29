@@ -101,3 +101,8 @@ C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBea
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBearerTokenGUI.csproj.CopyComplete
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBearerTokenGUI.exe
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBearerTokenGUI.pdb
+C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.pdb
+C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBearerTokenGUI.csprojAssemblyReference.cache
+C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerTokenGUI\obj\Debug\GetBearerTokenGUI.GetCodeForm.resources

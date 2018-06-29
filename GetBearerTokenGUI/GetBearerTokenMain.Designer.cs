@@ -60,18 +60,26 @@
             this.buttonLoadCertificate = new System.Windows.Forms.Button();
             this.radioButtonAuthWithCertificate = new System.Windows.Forms.RadioButton();
             this.radioButtonAuthWithClientSecret = new System.Windows.Forms.RadioButton();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.v2EndpointBtn = new System.Windows.Forms.RadioButton();
+            this.v1EndpointBtn = new System.Windows.Forms.RadioButton();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.nativeApiBtn = new System.Windows.Forms.RadioButton();
+            this.webAppApiBtn = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 587);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 747);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 19, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1084, 22);
@@ -82,7 +90,7 @@
             // 
             this.tokenBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tokenBox.Location = new System.Drawing.Point(3, 17);
-            this.tokenBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tokenBox.Margin = new System.Windows.Forms.Padding(4);
             this.tokenBox.Multiline = true;
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -93,7 +101,7 @@
             // 
             this.adminConsentBox.AutoSize = true;
             this.adminConsentBox.Location = new System.Drawing.Point(6, 26);
-            this.adminConsentBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adminConsentBox.Margin = new System.Windows.Forms.Padding(4);
             this.adminConsentBox.Name = "adminConsentBox";
             this.adminConsentBox.Size = new System.Drawing.Size(123, 21);
             this.adminConsentBox.TabIndex = 25;
@@ -102,8 +110,8 @@
             // 
             // redirectUrlBox
             // 
-            this.redirectUrlBox.Location = new System.Drawing.Point(143, 108);
-            this.redirectUrlBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.redirectUrlBox.Location = new System.Drawing.Point(143, 82);
+            this.redirectUrlBox.Margin = new System.Windows.Forms.Padding(4);
             this.redirectUrlBox.Name = "redirectUrlBox";
             this.redirectUrlBox.Size = new System.Drawing.Size(359, 22);
             this.redirectUrlBox.TabIndex = 23;
@@ -111,26 +119,27 @@
             // 
             // applicationIDBox
             // 
-            this.applicationIDBox.Location = new System.Drawing.Point(143, 50);
-            this.applicationIDBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationIDBox.Location = new System.Drawing.Point(143, 141);
+            this.applicationIDBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationIDBox.Name = "applicationIDBox";
             this.applicationIDBox.Size = new System.Drawing.Size(359, 22);
             this.applicationIDBox.TabIndex = 21;
+            this.applicationIDBox.Text = "4d07e393-5137-4f83-a20e-ccf36de558bd";
             // 
             // tenantIdBox
             // 
-            this.tenantIdBox.Location = new System.Drawing.Point(143, 22);
-            this.tenantIdBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tenantIdBox.Location = new System.Drawing.Point(143, 26);
+            this.tenantIdBox.Margin = new System.Windows.Forms.Padding(4);
             this.tenantIdBox.Name = "tenantIdBox";
             this.tenantIdBox.Size = new System.Drawing.Size(359, 22);
             this.tenantIdBox.TabIndex = 20;
-            this.tenantIdBox.Text = ".onmicrosoft.com";
+            this.tenantIdBox.Text = "dsmsgeu.onmicrosoft.com";
             this.tenantIdBox.TextChanged += new System.EventHandler(this.tenantIdBox_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 139);
+            this.label5.Location = new System.Drawing.Point(6, 113);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 17);
@@ -140,7 +149,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 110);
+            this.label4.Location = new System.Drawing.Point(6, 84);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 17);
@@ -150,7 +159,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 82);
+            this.label3.Location = new System.Drawing.Point(6, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 17);
@@ -160,7 +169,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 24);
+            this.label2.Location = new System.Drawing.Point(6, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 17);
@@ -170,7 +179,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 53);
+            this.label1.Location = new System.Drawing.Point(6, 144);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 17);
@@ -180,15 +189,16 @@
             // clientSecretBox
             // 
             this.clientSecretBox.Location = new System.Drawing.Point(128, 19);
-            this.clientSecretBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clientSecretBox.Margin = new System.Windows.Forms.Padding(4);
             this.clientSecretBox.Name = "clientSecretBox";
             this.clientSecretBox.Size = new System.Drawing.Size(374, 22);
             this.clientSecretBox.TabIndex = 27;
+            this.clientSecretBox.Text = "4vYgM++KK+emTvlIUNHWesCVaWMNrDFdBn1K5V+CmNA=";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(220, 22);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 28);
             this.button1.TabIndex = 29;
@@ -199,7 +209,7 @@
             // applicationTokenBtn
             // 
             this.applicationTokenBtn.Location = new System.Drawing.Point(369, 22);
-            this.applicationTokenBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationTokenBtn.Margin = new System.Windows.Forms.Padding(4);
             this.applicationTokenBtn.Name = "applicationTokenBtn";
             this.applicationTokenBtn.Size = new System.Drawing.Size(151, 28);
             this.applicationTokenBtn.TabIndex = 30;
@@ -211,7 +221,7 @@
             // 
             this.decodedTokenBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.decodedTokenBox.Location = new System.Drawing.Point(3, 17);
-            this.decodedTokenBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.decodedTokenBox.Margin = new System.Windows.Forms.Padding(4);
             this.decodedTokenBox.Multiline = true;
             this.decodedTokenBox.Name = "decodedTokenBox";
             this.decodedTokenBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -221,7 +231,7 @@
             // buttonEWSGetInboxCount
             // 
             this.buttonEWSGetInboxCount.Location = new System.Drawing.Point(9, 73);
-            this.buttonEWSGetInboxCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonEWSGetInboxCount.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEWSGetInboxCount.Name = "buttonEWSGetInboxCount";
             this.buttonEWSGetInboxCount.Size = new System.Drawing.Size(151, 28);
             this.buttonEWSGetInboxCount.TabIndex = 32;
@@ -298,11 +308,11 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.applicationIDBox);
             this.groupBox2.Controls.Add(this.redirectUrlBox);
-            this.groupBox2.Location = new System.Drawing.Point(11, 10);
+            this.groupBox2.Location = new System.Drawing.Point(11, 99);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(515, 175);
+            this.groupBox2.Size = new System.Drawing.Size(510, 206);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Application Information";
@@ -313,7 +323,7 @@
             this.comboBoxAuthenticationUrl.Items.AddRange(new object[] {
             "https://login.microsoftonline.com/common",
             "https://login.microsoftonline.com/<tenant>"});
-            this.comboBoxAuthenticationUrl.Location = new System.Drawing.Point(143, 137);
+            this.comboBoxAuthenticationUrl.Location = new System.Drawing.Point(143, 111);
             this.comboBoxAuthenticationUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxAuthenticationUrl.Name = "comboBoxAuthenticationUrl";
             this.comboBoxAuthenticationUrl.Size = new System.Drawing.Size(359, 24);
@@ -327,7 +337,7 @@
             "https://graph.microsoft.com",
             "https://manage.office.com",
             "https://graph.windowsazure.net"});
-            this.comboBoxResourceUrl.Location = new System.Drawing.Point(143, 79);
+            this.comboBoxResourceUrl.Location = new System.Drawing.Point(143, 53);
             this.comboBoxResourceUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxResourceUrl.Name = "comboBoxResourceUrl";
             this.comboBoxResourceUrl.Size = new System.Drawing.Size(359, 24);
@@ -351,7 +361,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tokenBox);
-            this.groupBox4.Location = new System.Drawing.Point(11, 282);
+            this.groupBox4.Location = new System.Drawing.Point(11, 447);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -363,7 +373,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.decodedTokenBox);
-            this.groupBox5.Location = new System.Drawing.Point(445, 282);
+            this.groupBox5.Location = new System.Drawing.Point(445, 447);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -379,11 +389,11 @@
             this.groupBox6.Controls.Add(this.radioButtonAuthWithCertificate);
             this.groupBox6.Controls.Add(this.radioButtonAuthWithClientSecret);
             this.groupBox6.Controls.Add(this.clientSecretBox);
-            this.groupBox6.Location = new System.Drawing.Point(11, 190);
+            this.groupBox6.Location = new System.Drawing.Point(11, 312);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(515, 87);
+            this.groupBox6.Size = new System.Drawing.Size(510, 85);
             this.groupBox6.TabIndex = 38;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Authentication";
@@ -433,11 +443,81 @@
             this.radioButtonAuthWithClientSecret.UseVisualStyleBackColor = true;
             this.radioButtonAuthWithClientSecret.CheckedChanged += new System.EventHandler(this.radioButtonAuthWithClientSecret_CheckedChanged);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.v2EndpointBtn);
+            this.groupBox7.Controls.Add(this.v1EndpointBtn);
+            this.groupBox7.Location = new System.Drawing.Point(11, 10);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(248, 81);
+            this.groupBox7.TabIndex = 39;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Endpoint Type";
+            // 
+            // v2EndpointBtn
+            // 
+            this.v2EndpointBtn.AutoSize = true;
+            this.v2EndpointBtn.Location = new System.Drawing.Point(16, 51);
+            this.v2EndpointBtn.Name = "v2EndpointBtn";
+            this.v2EndpointBtn.Size = new System.Drawing.Size(223, 21);
+            this.v2EndpointBtn.TabIndex = 32;
+            this.v2EndpointBtn.Text = "v2.0 (apps.dev.microsoft..com)";
+            this.v2EndpointBtn.UseVisualStyleBackColor = true;
+            // 
+            // v1EndpointBtn
+            // 
+            this.v1EndpointBtn.AutoSize = true;
+            this.v1EndpointBtn.Checked = true;
+            this.v1EndpointBtn.Location = new System.Drawing.Point(16, 27);
+            this.v1EndpointBtn.Name = "v1EndpointBtn";
+            this.v1EndpointBtn.Size = new System.Drawing.Size(176, 21);
+            this.v1EndpointBtn.TabIndex = 31;
+            this.v1EndpointBtn.TabStop = true;
+            this.v1EndpointBtn.Text = "v1.0 (portal.azure.com)";
+            this.v1EndpointBtn.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.nativeApiBtn);
+            this.groupBox8.Controls.Add(this.webAppApiBtn);
+            this.groupBox8.Location = new System.Drawing.Point(273, 10);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(248, 81);
+            this.groupBox8.TabIndex = 40;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Registration Type";
+            // 
+            // nativeApiBtn
+            // 
+            this.nativeApiBtn.AutoSize = true;
+            this.nativeApiBtn.Location = new System.Drawing.Point(16, 51);
+            this.nativeApiBtn.Name = "nativeApiBtn";
+            this.nativeApiBtn.Size = new System.Drawing.Size(142, 21);
+            this.nativeApiBtn.TabIndex = 32;
+            this.nativeApiBtn.Text = "Native Application";
+            this.nativeApiBtn.UseVisualStyleBackColor = true;
+            this.nativeApiBtn.Click += new System.EventHandler(this.nativeApiBtn_Click);
+            // 
+            // webAppApiBtn
+            // 
+            this.webAppApiBtn.AutoSize = true;
+            this.webAppApiBtn.Checked = true;
+            this.webAppApiBtn.Location = new System.Drawing.Point(16, 27);
+            this.webAppApiBtn.Name = "webAppApiBtn";
+            this.webAppApiBtn.Size = new System.Drawing.Size(164, 21);
+            this.webAppApiBtn.TabIndex = 31;
+            this.webAppApiBtn.TabStop = true;
+            this.webAppApiBtn.Text = "Web Application / API";
+            this.webAppApiBtn.UseVisualStyleBackColor = true;
+            this.webAppApiBtn.Click += new System.EventHandler(this.webAppApiBtn_Click);
+            // 
             // GetBearerTokenMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 609);
+            this.ClientSize = new System.Drawing.Size(1084, 769);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -446,7 +526,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GetBearerTokenMain";
@@ -463,6 +543,10 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,6 +585,12 @@
         private System.Windows.Forms.TextBox textBoxAuthCertificate;
         private System.Windows.Forms.ComboBox comboBoxResourceUrl;
         private System.Windows.Forms.ComboBox comboBoxAuthenticationUrl;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RadioButton v2EndpointBtn;
+        private System.Windows.Forms.RadioButton v1EndpointBtn;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.RadioButton nativeApiBtn;
+        private System.Windows.Forms.RadioButton webAppApiBtn;
     }
 }
 

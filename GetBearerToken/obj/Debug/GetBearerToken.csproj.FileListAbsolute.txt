@@ -50,7 +50,6 @@ C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\bin\Debug\Microsoft
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
-C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\obj\Debug\GetBearerToken.csprojAssemblyReference.cache
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\obj\Debug\GetBearerToken.csproj.CoreCompileInputs.cache
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\obj\Debug\GetBearerToken.csproj.CopyComplete
 C:\Users\anixi\Source\Repos\OauthTokenSamples\GetBearerToken\obj\Debug\GetBearerToken.exe

@@ -22,6 +22,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security;
 using System.Security.Cryptography.X509Certificates;
+using System.Net.Http;
+using System.Net;
+using System.Web;
 
 namespace GetBearerTokenGUI
 {
@@ -43,9 +46,47 @@ namespace GetBearerTokenGUI
             public string resource;
             public string redirectUrl;
             public bool adminConsent;
+            public bool isV2Endpoint;
+            public bool isNativeApplication;
+            public bool isDelegateTokenRequest;
         }
 
         private static Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext authenticationContext;
+
+        public static string GetAuthorizationcode(RuntimeOptions runtimeOptions)
+        {
+
+            string url = string.Format("https://login.microsoftonline.com/{0}/oauth2/authorize?client_id={1}&response_type=code&prompt=login&redirect_uri={2}&resource={3}", runtimeOptions.tenantName, runtimeOptions.clientId, System.Web.HttpUtility.UrlEncode(runtimeOptions.redirectUrl), System.Web.HttpUtility.UrlEncode(runtimeOptions.resource));
+
+                using (var client = new HttpClient(new HttpClientHandler() { AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip }) { Timeout = new TimeSpan(0, 2, 0)})
+                {
+                    var request = new HttpRequestMessage()
+                    {
+                        RequestUri = new Uri(url),
+                        Method = HttpMethod.Get
+                    };
+
+                    HttpResponseMessage response = client.SendAsync(request).Result;
+                    var statusCode = (int)response.StatusCode;
+
+                    // We want to handle redirects ourselves so that we can determine the final redirect Location (via header)
+                    if (statusCode >= 300 && statusCode <= 399)
+                    {
+                        var redirectUri = response.Headers.Location;
+                        if (!redirectUri.IsAbsoluteUri)
+                        {
+                            redirectUri = new Uri(request.RequestUri.GetLeftPart(UriPartial.Authority) + redirectUri);
+                        }
+                    }
+                    else if (!response.IsSuccessStatusCode)
+                    {
+                        throw new Exception();
+                    }
+
+                    return "";
+                }
+            
+        }
 
         // <summary>
         /// Perform any required app initialization.
@@ -68,6 +109,7 @@ namespace GetBearerTokenGUI
             try
             {
                 AuthenticationResult authenticationResult;
+                
                 if (runtimeOptions.adminConsent)
                 {
                     authenticationResult = await authenticationContext.AcquireTokenAsync(resource,
@@ -79,6 +121,7 @@ namespace GetBearerTokenGUI
                 }
                 else
                 {
+      
                     authenticationResult = await authenticationContext.AcquireTokenAsync(resource, clientId, redirectUri, new PlatformParameters(PromptBehavior.Always));
                 }
                 token = authenticationResult.AccessToken;
@@ -90,6 +133,97 @@ namespace GetBearerTokenGUI
             }
 
         }
+
+
+        public static async Task<string> GetToken(RuntimeOptions runtimeOptions)
+        {
+            // Get OAuth token using client credentials 
+            string tenantName = runtimeOptions.tenantName;
+            string authString = runtimeOptions.authUrl + "/" + tenantName;
+
+            authenticationContext = new Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext(authString, false);
+
+            string token;
+
+            try
+            {
+                AuthenticationResult authenticationResult = null;
+                if (runtimeOptions.isDelegateTokenRequest)
+                {
+                    if (runtimeOptions.isNativeApplication)
+                    {
+                        if (runtimeOptions.adminConsent)
+                        {
+                            authenticationResult = await authenticationContext.AcquireTokenAsync(runtimeOptions.resource,
+                                runtimeOptions.clientId,
+                                new Uri(runtimeOptions.redirectUrl),
+                                new PlatformParameters(PromptBehavior.Always),
+                                UserIdentifier.AnyUser,
+                                "prompt=admin_consent");
+                        }
+                        else
+                        {
+
+                            authenticationResult = await authenticationContext.AcquireTokenAsync(runtimeOptions.resource, runtimeOptions.clientId, new Uri(runtimeOptions.redirectUrl), new PlatformParameters(PromptBehavior.Always));
+                        }
+                    }
+                    else
+                    {
+                        GetCodeForm getCodeForm = new GetCodeForm(runtimeOptions.clientId, runtimeOptions.redirectUrl, runtimeOptions.resource, runtimeOptions.isV2Endpoint, runtimeOptions.adminConsent);
+                        if (getCodeForm.ShowDialog() == DialogResult.OK)
+                        {
+                            string code = getCodeForm._acquiredCode;
+                            if (runtimeOptions.cert == null)
+                            {
+
+                                ClientCredential clientCred = new ClientCredential(runtimeOptions.clientId, runtimeOptions.key);
+                                authenticationResult = await authenticationContext.AcquireTokenByAuthorizationCodeAsync(code, new Uri(runtimeOptions.redirectUrl), clientCred);
+                            }
+                            else
+                            {
+                                ClientAssertionCertificate clientCert = new ClientAssertionCertificate(runtimeOptions.clientId, runtimeOptions.cert);
+                                authenticationResult = await authenticationContext.AcquireTokenByAuthorizationCodeAsync(code, new Uri(runtimeOptions.redirectUrl), clientCert);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+  
+                    if (runtimeOptions.cert == null)
+                    {
+                        ClientCredential clientCred = new ClientCredential(runtimeOptions.clientId, runtimeOptions.key);
+                        authenticationResult = await authenticationContext.AcquireTokenAsync(runtimeOptions.resource, clientCred);
+                    }
+                    else
+                    {
+                        ClientAssertionCertificate clientCert = new ClientAssertionCertificate(runtimeOptions.clientId, runtimeOptions.cert);
+                        authenticationResult = await authenticationContext.AcquireTokenAsync(runtimeOptions.resource, clientCert);
+                    }
+                }
+                token = authenticationResult.AccessToken;
+                return token;
+            }
+            catch (AuthenticationException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Acquiring a token failed with the following error: {0}", ex.Message);
+                if (ex.InnerException != null)
+                {
+                    //  You should implement retry and back-off logic according to
+                    //  http://msdn.microsoft.com/en-us/library/dn168916.aspx . This topic also
+                    //  explains the HTTP error status code in the InnerException message. 
+                    Console.WriteLine("Error detail: {0}", ex.InnerException.Message);
+                }
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+
+        }
+
 
         public static async Task<string> GetTokenWeb(RuntimeOptions runtimeOptions)
         {
@@ -159,6 +293,30 @@ namespace GetBearerTokenGUI
                 MessageBox.Show("Redirect Url cannot be empty when acquiring a delegate token!");
                 return;
             }
+
+            X509Certificate2 authCertificate = null;
+            if (radioButtonAuthWithClientSecret.Checked)
+            {
+                if (clientSecretBox.Text == string.Empty)
+                {
+                    MessageBox.Show("Client Secret cannot be empty when acquiring an application token!");
+                    return;
+                }
+            }
+            else
+            {
+                try
+                {
+                    authCertificate = (X509Certificate2)textBoxAuthCertificate.Tag;
+                }
+                catch { }
+                if (authCertificate == null)
+                {
+                    MessageBox.Show("Please select a valid authentication certificate");
+                    return;
+                }
+            }
+
             tokenBox.Clear();
             RuntimeOptions runtimeOptions = new RuntimeOptions();
             runtimeOptions.adminConsent = adminConsentBox.Checked;
@@ -167,7 +325,13 @@ namespace GetBearerTokenGUI
             runtimeOptions.resource = comboBoxResourceUrl.Text;
             runtimeOptions.redirectUrl = redirectUrlBox.Text;
             runtimeOptions.tenantName = tenantIdBox.Text;
-            string token = await GetTokenNative(runtimeOptions);
+            runtimeOptions.key = clientSecretBox.Text;
+            runtimeOptions.cert = authCertificate;
+            runtimeOptions.isV2Endpoint = v2EndpointBtn.Checked;
+            runtimeOptions.isNativeApplication = nativeApiBtn.Checked;
+            runtimeOptions.isDelegateTokenRequest = true;
+            string token = await GetToken(runtimeOptions);
+            // token = await GetTokenNative(runtimeOptions);
             
             tokenBox.Text = token;
             Tuple<bool, string, string, string> decodedTokem = TryDecodeToken(token);
@@ -218,6 +382,8 @@ namespace GetBearerTokenGUI
             runtimeOptions.key = clientSecretBox.Text;
             runtimeOptions.cert = authCertificate;
             runtimeOptions.tenantName = tenantIdBox.Text;
+            runtimeOptions.isV2Endpoint = v2EndpointBtn.Checked;
+            runtimeOptions.isNativeApplication = nativeApiBtn.Checked;
             string token = await GetTokenWeb(runtimeOptions);
 
             tokenBox.Text = token;
@@ -405,6 +571,30 @@ namespace GetBearerTokenGUI
         private void tenantIdBox_TextChanged(object sender, EventArgs e)
         {
             comboBoxAuthenticationUrl.Items[1] = "https://login.microsoftonline.com/" + tenantIdBox.Text;
+        }
+
+        private void nativeApiBtn_Click(object sender, EventArgs e)
+        {
+            if (nativeApiBtn.Checked)
+            {
+                applicationTokenBtn.Enabled = false;
+            }
+            else
+            {
+                applicationTokenBtn.Enabled = true;
+            }
+        }
+
+        private void webAppApiBtn_Click(object sender, EventArgs e)
+        {
+            if (webAppApiBtn.Checked)
+            {
+                applicationTokenBtn.Enabled = true;
+            }
+            else
+            {
+                applicationTokenBtn.Enabled = false;
+            }
         }
     }
 }

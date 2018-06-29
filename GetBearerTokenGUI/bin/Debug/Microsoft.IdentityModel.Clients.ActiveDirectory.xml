@@ -734,6 +734,20 @@
             <param name="userAssertion">The user assertion (token) to use for token acquisition.</param>
             <returns>It contains Access Token and the Access Token's expiration time.</returns>
         </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext.AcquireTokenAsync(System.String,Microsoft.IdentityModel.Clients.ActiveDirectory.IClientAssertionCertificate,Microsoft.IdentityModel.Clients.ActiveDirectory.UserAssertion,System.Boolean)">
+            <summary>
+            Acquires an access token from the authority on behalf of a user. It requires using a user token previously received.
+            </summary>
+            <param name="resource">Identifier of the target resource that is the recipient of the requested token.</param>
+            <param name="clientCertificate">The client certificate to use for token acquisition.</param>
+            <param name="userAssertion">The user assertion (token) to use for token acquisition.</param>
+            <param name="sendX5c">This parameter enables application developers to achieve easy certificates roll-over
+            in Azure AD: setting this parameter to true will send the public certificate to Azure AD
+            along with the token request, so that Azure AD can use it to validate the subject name based on a trusted issuer policy.
+            This saves the application admin from the need to explicitly manage the certificate rollover
+            (either via portal or powershell/CLI operation)</param>
+            <returns>It contains Access Token and the Access Token's expiration time.</returns>
+        </member>
         <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext.AcquireTokenAsync(System.String,Microsoft.IdentityModel.Clients.ActiveDirectory.ClientAssertion,Microsoft.IdentityModel.Clients.ActiveDirectory.UserAssertion)">
             <summary>
             Acquires an access token from the authority on behalf of a user. It requires using a user token previously received.
